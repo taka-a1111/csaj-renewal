@@ -117,6 +117,10 @@ img{max-width:100%;display:block}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
 .hero .btn-gho{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.28);backdrop-filter:blur(6px)}
 .hero .btn-gho:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
+/* floating spec chips */
+.hero-stats{display:flex;gap:34px;margin-top:54px;flex-wrap:wrap}
+.hero-stats .st .n{font-family:var(--fonten);font-size:34px;font-weight:700;color:#fff;line-height:1}
+.hero-stats .st .l{font-size:12px;color:#b3aee0;margin-top:7px}
 /* reveal animation */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
@@ -152,7 +156,7 @@ img{max-width:100%;display:block}
 
 /* ============ NEWS (TOP) ============ */
 .news-list{margin-top:8px}
-.news-row{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line);transition:.16s}
+.news-row{display:flex;gap:24px;align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--line);transition:.16s}
 .news-row:hover{background:var(--brand-50);padding-left:14px;padding-right:14px;border-radius:8px;border-color:transparent}
 .news-row .nd{font-family:var(--fonten);font-size:13px;color:var(--accent-ink);font-weight:600;white-space:nowrap;min-width:96px}
 .news-row .nt{font-size:14.5px;color:var(--ink-2);font-weight:500}
@@ -235,7 +239,7 @@ img{max-width:100%;display:block}
   .wrap{padding:0 22px}
   .hd-in{padding:0 20px;height:62px}
   .hd-logo img{height:26px}
-  .hd-nav,body.sp .hd-cta{display:none}
+  .hd-nav,.hd-cta{display:none}
   .hd-burger{display:flex}
   .sec{padding:60px 0}
   .sec-h{font-size:25px}
@@ -243,6 +247,8 @@ img{max-width:100%;display:block}
   .hero-in{padding:0 22px}
   .hero h1{font-size:30px}
   .hero p{font-size:14px}
+  .hero-stats{gap:22px;margin-top:36px}
+  .hero-stats .st .n{font-size:26px}
   .pillars{grid-template-columns:1fr;gap:18px}
   .code-pillars{grid-template-columns:1fr}
   .news-row{flex-direction:column;gap:5px}
@@ -318,8 +324,6 @@ img{max-width:100%;display:block}
   .news-item{grid-template-columns:1fr;gap:6px;padding:16px 20px}
   .news-item .nd{font-size:12.5px}
   .news-item .nt{font-size:14px}
-  .news-row{grid-template-columns:1fr;gap:4px;padding:14px 4px}
-  .news-row .nd{font-size:12.5px}
 }
 
 </style>
@@ -438,7 +442,7 @@ img{max-width:100%;display:block}
   <path d="M3 3v18h18" stroke="#9b95c4" stroke-width="1.2"/>
   <path d="M4 17 L7 17 L7 13 L10 13 L10 8 L13 8 L13 14 L16 14 L16 6 L19 6 L19 11 L21 11" stroke="url(#g-pra1)" stroke-width="2"/>
 </svg></div>
-          <div class="jp-sub">PRA (Probabilistic Risk Analysis)</div>
+          <div class="jp-sub">PRA</div>
           <h3>確率論的リスク評価</h3>
           <p>複雑で巨大なプラント・システムが内包するリスクを評価します。プラントの通常運転時や停止時のほか、地震国である我が国では地震時の確率論的リスク評価が重要視されており、当社は技術支援・コンサルティングを行います。</p>
         </div>
@@ -529,7 +533,7 @@ img{max-width:100%;display:block}
       <div class="news-list" style="margin-top:30px">
         <div class="news-row rv"><span class="nd en">2026.04.10</span><span class="nt">ホームページを更新しました</span></div>
         <div class="news-row rv"><span class="nd en">2024.11.08</span><span class="nt">弊社創業者が日本機械学会から表彰を受けました</span></div>
-        <div class="news-row rv"><span class="nd en">2019.11.15</span><span class="nt">「高リスク産業における意思決定」が出版されました</span></div>
+        <div class="news-row rv"><span class="nt"><span class="nd en" style="margin-right:24px">2019.11.15</span>「高リスク産業における意思決定」が出版されました</span></div>
         <div class="news-row rv"><span class="nd en">2019.06.01</span><span class="nt">社長就任のご挨拶が掲載されました</span></div>
       </div>
     </div>
