@@ -327,6 +327,7 @@ img{max-width:100%;display:block}
 }
 
 </style>
+<style>.filters .fl{cursor:pointer;user-select:none}</style>
 </head>
 <body>
 <header class="hd" id="hd">
@@ -353,12 +354,12 @@ img{max-width:100%;display:block}
     <div class="wrap">
     <p class="sec-lead" style="margin-bottom:30px">当社が取り扱う解析コードを、事業の3本柱（熱水力／シビアアクシデント／PRA）ごとに分類して掲載しています。コード名をクリックすると詳細ページへ移動します。</p>
     <div class="filters">
-      <span class="fl on">すべて</span>
-      <span class="fl">熱水力</span>
-      <span class="fl">シビアアクシデント</span>
-      <span class="fl">PRA</span>
+      <span class="fl on" onclick="filterCat('all', this)">すべて</span>
+      <span class="fl" onclick="filterCat('thermo', this)">熱水力</span>
+      <span class="fl" onclick="filterCat('sa', this)">シビアアクシデント</span>
+      <span class="fl" onclick="filterCat('pra', this)">PRA</span>
     </div>
-    <div class="theme-cat tc1">
+    <div class="theme-cat tc1" data-cat="thermo">
       <div class="theme-cat-h"><span class="badge en">1</span><h3>熱水力</h3><span class="ct en">13 codes</span></div>
       <div class="theme-items">
         <div class="theme-item"><span class="tnum en">01</span><span class="ttl">RETRAN</span><a class="more" href="./code-retran.html">詳しく見る →</a></div>
@@ -376,7 +377,7 @@ img{max-width:100%;display:block}
         <div class="theme-item"><span class="tnum en">13</span><span class="ttl">FRAPCON/FRAPTRAN</span><a class="more" href="./code-frapcon-fraptran.html">詳しく見る →</a></div>
       </div>
     </div>
-    <div class="theme-cat tc2">
+    <div class="theme-cat tc2" data-cat="sa">
       <div class="theme-cat-h"><span class="badge en">2</span><h3>シビアアクシデント</h3><span class="ct en">5 codes</span></div>
       <div class="theme-items">
         <div class="theme-item"><span class="tnum en">01</span><span class="ttl">MAAP</span><a class="more" href="./code-maap.html">詳しく見る →</a></div>
@@ -386,7 +387,7 @@ img{max-width:100%;display:block}
         <div class="theme-item"><span class="tnum en">05</span><span class="ttl">JASMINE</span><a class="more" href="./code-jasmine.html">詳しく見る →</a></div>
       </div>
     </div>
-    <div class="theme-cat tc3">
+    <div class="theme-cat tc3" data-cat="pra">
       <div class="theme-cat-h"><span class="badge en">3</span><h3>PRA</h3><span class="ct en">7 codes</span></div>
       <div class="theme-items">
         <div class="theme-item"><span class="tnum en">01</span><span class="ttl">SECOM2</span><a class="more" href="./code-secom2.html">詳しく見る →</a></div>
@@ -454,5 +455,16 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal, .rv').forEach(el => observer.observe(el));
 </script>
+
+<script>
+function filterCat(cat, btn){
+  document.querySelectorAll('.filters .fl').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.theme-cat').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+
 </body>
 </html>

@@ -327,6 +327,7 @@ img{max-width:100%;display:block}
 }
 
 </style>
+<style>.filters .fl{cursor:pointer;user-select:none}</style>
 </head>
 <body>
 <header class="hd" id="hd">
@@ -353,21 +354,21 @@ img{max-width:100%;display:block}
     <div class="wrap">
     <p class="sec-lead" style="margin-bottom:30px">当社がこれまで取り組んできた解析・評価テーマを、事業の3本柱ごとに分類して掲載しています。詳細をご紹介できるテーマには「詳しく見る」リンクを設けています。</p>
     <div class="filters">
-      <span class="fl on">すべて</span>
-      <span class="fl">過渡時熱水力</span>
-      <span class="fl">シビアアクシデント</span>
-      <span class="fl">確率論的リスク評価</span>
+      <span class="fl on" onclick="filterCat('all', this)">すべて</span>
+      <span class="fl" onclick="filterCat('thermo', this)">過渡時熱水力</span>
+      <span class="fl" onclick="filterCat('sa', this)">シビアアクシデント</span>
+      <span class="fl" onclick="filterCat('pra', this)">確率論的リスク評価</span>
     </div>
     
-    <div class="theme-cat tc1">
+    <div class="theme-cat tc1" data-cat="thermo">
       <div class="theme-cat-h"><span class="badge en">1</span><h3>過渡時熱水力関連</h3><span class="ct en">19 themes</span></div>
       <div class="theme-items"><div class="theme-item"><span class="tnum en">01</span><span class="ttl">統計的安全評価解析用の各種パラメータの不確実さデータの調査</span><a class="more">詳しく見る →</a></div><div class="theme-item"><span class="tnum en">02</span><span class="ttl">統計的安全評価手法の機能整備と過渡解析への適用</span></div><div class="theme-item"><span class="tnum en">03</span><span class="ttl">熱水力解析コードTRACEと3次元核計算コードSKETCHの一体化</span></div><div class="theme-item"><span class="tnum en">04</span><span class="ttl">核燃料施設設備内の3次元熱流動解析</span></div><div class="theme-item"><span class="tnum en">05</span><span class="ttl">熱水力解析コードRELAP5、TRACEを用いた大型熱水力実験の過渡事象解析</span></div><div class="theme-item"><span class="tnum en">06</span><span class="ttl">高温ガス炉システムのシステム評価コード検証解析</span></div><div class="theme-item"><span class="tnum en">07</span><span class="ttl">高温ガス炉システムの冷却ループの解析モデルの構築と挙動解析</span></div><div class="theme-item"><span class="tnum en">08</span><span class="ttl">熱水力解析コードTRACEの炉心熱水力モデルの改良</span></div><div class="theme-item"><span class="tnum en">09</span><span class="ttl">熱水力解析コードTRACEによるPWR、BWRプラントの過渡事象解析</span></div><div class="theme-item"><span class="tnum en">10</span><span class="ttl">熱水力解析コードTRACEによるデータ同化の検討</span></div><div class="theme-item"><span class="tnum en">11</span><span class="ttl">熱水力解析コードTRACEを用いた不確実さ逆解析手法の検討</span></div><div class="theme-item"><span class="tnum en">12</span><span class="ttl">熱水力解析コードTRACEによる核融合炉モデルの構築</span></div><div class="theme-item"><span class="tnum en">13</span><span class="ttl">熱水力解析コードRELAP5によるPWR、BWRプラントの過渡事象解析</span></div><div class="theme-item"><span class="tnum en">14</span><span class="ttl">熱水力解析コードRELAP5の浮体式炉への適用検討</span></div><div class="theme-item"><span class="tnum en">15</span><span class="ttl">熱水力解析コードRELAP5の燃料温度評価モデルの性能評価</span></div><div class="theme-item"><span class="tnum en">16</span><span class="ttl">RIA（反応度事故）時の燃料挙動解析コードの整備</span></div><div class="theme-item"><span class="tnum en">17</span><span class="ttl">二相流三流体場サブチャンネル解析コードCOBRA-TFによる熱流動解析</span></div><div class="theme-item"><span class="tnum en">18</span><span class="ttl">プラント総合解析コードAprosによるPWR、BWRプラントのLOCA及び過渡事象解析</span></div><div class="theme-item"><span class="tnum en">19</span><span class="ttl">受動的安全系を持つ軽水炉の信頼性評価手法の検討</span></div></div>
     </div>
-    <div class="theme-cat tc2">
+    <div class="theme-cat tc2" data-cat="sa">
       <div class="theme-cat-h"><span class="badge en">2</span><h3>シビアアクシデント関連</h3><span class="ct en">11 themes</span></div>
       <div class="theme-items"><div class="theme-item"><span class="tnum en">01</span><span class="ttl">熱流動解析コードGOTHICによる福島第一原子力発電所における蒸気及び水素発生履歴の逆残算定解析</span><a class="more">詳しく見る →</a></div><div class="theme-item"><span class="tnum en">02</span><span class="ttl">緊急時対策支援システムの性能評価と機能検証</span></div><div class="theme-item"><span class="tnum en">03</span><span class="ttl">シビアアクシデント解析コードMAAPの保守、解析</span></div><div class="theme-item"><span class="tnum en">04</span><span class="ttl">放射性物質の放出評価ソフトの性能評価</span></div><div class="theme-item"><span class="tnum en">05</span><span class="ttl">シビアアクシデント解析シミュレータPCTRANの整備</span></div><div class="theme-item"><span class="tnum en">06</span><span class="ttl">シビアアクシデント解析コードMAAPを利用する技術者の育成</span></div><div class="theme-item"><span class="tnum en">07</span><span class="ttl">水蒸気爆発解析コードJASMINEにおける解析モデルの調査と整理</span></div><div class="theme-item"><span class="tnum en">08</span><span class="ttl">事故時の格納容器ベント及び非常用ガス処理系内の気体流動解析</span></div><div class="theme-item"><span class="tnum en">09</span><span class="ttl">事故時の使用済み燃料プール挙動解析</span></div><div class="theme-item"><span class="tnum en">10</span><span class="ttl">LOCA時の成功基準解析に対するシビアアクシデント解析コードMELCORの適用性検討</span></div><div class="theme-item"><span class="tnum en">11</span><span class="ttl">シビアアクシデント解析コードMAAPの解析結果に影響を与える入力変数の検討</span></div></div>
     </div>
-    <div class="theme-cat tc3">
+    <div class="theme-cat tc3" data-cat="pra">
       <div class="theme-cat-h"><span class="badge en">3</span><h3>確率論的リスク評価関連</h3><span class="ct en">17 themes</span></div>
       <div class="theme-items"><div class="theme-item"><span class="tnum en">01</span><span class="ttl">多数基立地サイトの地震PRAモデルの検討</span><a class="more">詳しく見る →</a></div><div class="theme-item"><span class="tnum en">02</span><span class="ttl">ASME標準に基づくPWR、BWRプラントのピアレビューの実施</span></div><div class="theme-item"><span class="tnum en">03</span><span class="ttl">国内学会標準に基づくPWR、BWRプラントのピアレビューの実施</span></div><div class="theme-item"><span class="tnum en">04</span><span class="ttl">ASME標準に基づくPRAモデルの高度化</span></div><div class="theme-item"><span class="tnum en">05</span><span class="ttl">PRA自営化支援</span></div><div class="theme-item"><span class="tnum en">06</span><span class="ttl">PRAに関する教育訓練に対する講師対応及び教材整備</span></div><div class="theme-item"><span class="tnum en">07</span><span class="ttl">地震時システム信頼性解析コードの開発と改良</span></div><div class="theme-item"><span class="tnum en">08</span><span class="ttl">地震と津波の重畳を評価するPRA手法の検討</span></div><div class="theme-item"><span class="tnum en">09</span><span class="ttl">内部溢水事象に対する溢水伝播解析と溢水PRAモデルの作成・評価</span></div><div class="theme-item"><span class="tnum en">10</span><span class="ttl">強風及び突風事象に対するPRAモデルの検討</span></div><div class="theme-item"><span class="tnum en">11</span><span class="ttl">火山灰による影響を考慮するPRAモデルの検討</span></div><div class="theme-item"><span class="tnum en">12</span><span class="ttl">航空機落下事故の調査とリスク評価のための事例整理</span></div><div class="theme-item"><span class="tnum en">13</span><span class="ttl">前兆事象評価のための事例調査及びモデル整備</span></div><div class="theme-item"><span class="tnum en">14</span><span class="ttl">再処理施設を対象としたPRAの検討</span></div><div class="theme-item"><span class="tnum en">15</span><span class="ttl">核燃料加工施設を対象としたPRAの検討</span></div><div class="theme-item"><span class="tnum en">16</span><span class="ttl">人間信頼性解析における解析手法に関する検討</span></div><div class="theme-item"><span class="tnum en">17</span><span class="ttl">火災PRAの解析評価手法の調査</span></div></div>
     </div>
@@ -427,5 +428,16 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal, .rv').forEach(el => observer.observe(el));
 </script>
+
+<script>
+function filterCat(cat, btn){
+  document.querySelectorAll('.filters .fl').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.theme-cat').forEach(c => {
+    c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+
 </body>
 </html>
