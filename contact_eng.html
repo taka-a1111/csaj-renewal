@@ -337,6 +337,13 @@ img{max-width:100%;display:block}
 .hd-dd-menu a:hover{background:#f3f1fb;color:#271284}
 .hd-dd-menu a.cur{color:#271284;font-weight:700}
 </style>
+<style>
+#toTop{position:fixed;right:28px;bottom:28px;width:48px;height:48px;border:none;border-radius:50%;background:var(--brand,#271284);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(20,18,60,.28);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s ease;z-index:80}
+#toTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+#toTop:hover{background:#1c0d66;transform:translateY(-2px)}
+#toTop svg{width:20px;height:20px}
+@media(max-width:600px){#toTop{right:18px;bottom:18px;width:44px;height:44px}}
+</style>
 </head>
 <body>
 <header class="hd" id="hd">
@@ -404,5 +411,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal, .rv').forEach(el => observer.observe(el));
 </script>
+<button id="toTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<script>(function(){var b=document.getElementById("toTop");if(!b)return;function f(){if(window.scrollY>400)b.classList.add("show");else b.classList.remove("show");}window.addEventListener("scroll",f,{passive:true});f();})();</script>
 </body>
 </html>
