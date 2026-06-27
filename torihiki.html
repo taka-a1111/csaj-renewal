@@ -327,7 +327,12 @@ img{max-width:100%;display:block}
 }
 
 </style>
-<style>.client-list{columns:2;column-gap:40px;list-style:none;padding:0;margin:18px 0 0}.client-list li{break-inside:avoid;padding:9px 0 9px 18px;position:relative;border-bottom:1px solid #ece9f7}.client-list li::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:#271284}@media(max-width:680px){.client-list{columns:1}}</style>
+<style>.client-list{columns:2;column-gap:40px;list-style:none;padding:0;margin:18px 0 0}.client-list li{break-inside:avoid;padding:9px 0 9px 18px;position:relative;border-bottom:1px solid #ece9f7}.client-list li::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:#271284}@media(max-width:680px){.client-list{columns:1}
+.cl-group{margin-top:34px}
+.cl-cat{font-size:18px;font-weight:700;color:var(--brand);padding-bottom:8px;border-bottom:2px solid var(--brand);margin-bottom:6px}
+.client-list a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:.15s}
+.client-list a:hover{color:var(--brand);border-bottom-color:var(--brand)}
+}</style>
 <style>
 .hd-dd{position:relative}
 .hd-dd>.hd-dd-t::after{content:"\25BE";font-size:9px;margin-left:5px;opacity:.6}
@@ -346,6 +351,10 @@ img{max-width:100%;display:block}
 @media(max-width:600px){#toTop{right:18px;bottom:18px;width:44px;height:44px}}
 </style>
 <style>html{scroll-padding-top:90px}</style>
+<style>
+.sec-lead{word-break:auto-phrase;line-break:strict}
+.hero p,.hero-2col p{word-break:auto-phrase;line-break:strict}
+</style>
 </head>
 <body>
 <header class="hd" id="hd">
@@ -376,43 +385,56 @@ img{max-width:100%;display:block}
     <div class="wrap">
       <div class="prose prose-narrow">
         <p>当社のこれまでの主なお取引先をご紹介いたします。（順不同）</p>
+              <div class="cl-group">
+        <h2 class="cl-cat">主な取引先</h2>
         <ul class="client-list">
-        <li>日本原子力研究開発機構</li>
-        <li>原子力規制庁</li>
-        <li>東北電力株式会社</li>
-        <li>東京電力株式会社</li>
-        <li>日本原子力発電株式会社</li>
-        <li>株式会社トインクス</li>
-        <li>株式会社テプコシステムズ</li>
-        <li>原電エンジニアリング株式会社</li>
-        <li>株式会社中電シーティーアイ</li>
-        <li>株式会社原子力安全システム研究所</li>
-        <li>株式会社原子力エンジニアリング</li>
-        <li>株式会社東芝</li>
-        <li>三菱重工業株式会社</li>
-        <li>原子燃料工業株式会社</li>
-        <li>三井造船株式会社</li>
-        <li>MHIニュークリアシステムズ・ソリューションエンジニアリング株式会社</li>
-        <li>伊藤忠テクノソリューションズ株式会社</li>
-        <li>日本エヌ・ユー・エス株式会社</li>
-        <li>電力中央研究所</li>
-        <li>エネルギー総合工学研究所</li>
-        <li>原子力安全推進協会</li>
-        <li>高度情報科学技術研究機構</li>
-        <li>原子力発電環境整備機構</li>
-        <li>北海道大学</li>
-        <li>東北大学</li>
-        <li>東京大学</li>
-        <li>東京科学大学(旧東京工業大学)</li>
-        <li>早稲田大学</li>
-        <li>東京都市大学</li>
-        <li>福井工業大学</li>
-        <li>大阪大学</li>
-        <li>九州大学</li>
-        <li>三菱UFJ銀行 新橋支店</li>
-        <li>株式会社 アストロン</li>
-        <li>エンヴィックス</li>
+        <li><a href="https://www.jaea.go.jp/" target="_blank" rel="noopener">日本原子力研究開発機構</a></li>
+        <li><a href="https://www.nra.go.jp/" target="_blank" rel="noopener">原子力規制庁</a></li>
+        <li><a href="https://www.tohoku-epco.co.jp/" target="_blank" rel="noopener">東北電力株式会社</a></li>
+        <li><a href="https://www.tepco.co.jp/index-j.html" target="_blank" rel="noopener">東京電力株式会社</a></li>
+        <li><a href="https://www.japc.co.jp/" target="_blank" rel="noopener">日本原子力発電株式会社</a></li>
+        <li><a href="https://www.toinx.co.jp/" target="_blank" rel="noopener">株式会社トインクス</a></li>
+        <li><a href="https://www.tepsys.co.jp/" target="_blank" rel="noopener">株式会社テプコシステムズ</a></li>
+        <li><a href="http://www.gnesc.co.jp" target="_blank" rel="noopener">原電エンジニアリング株式会社</a></li>
+        <li><a href="https://www.cti.co.jp/" target="_blank" rel="noopener">株式会社中電シーティーアイ</a></li>
+        <li><a href="http://www.inss.co.jp/" target="_blank" rel="noopener">株式会社原子力安全システム研究所</a></li>
+        <li><a href="https://www.neltd.co.jp/" target="_blank" rel="noopener">株式会社原子力エンジニアリング</a></li>
+        <li><a href="https://www.global.toshiba/jp/top.html" target="_blank" rel="noopener">株式会社東芝</a></li>
+        <li><a href="https://www.mhi.com/jp/" target="_blank" rel="noopener">三菱重工業株式会社</a></li>
+        <li><a href="https://www.nfi.co.jp/" target="_blank" rel="noopener">原子燃料工業株式会社</a></li>
+        <li><a href="https://www.mes.co.jp/" target="_blank" rel="noopener">三井造船株式会社</a></li>
+        <li><a href="https://www.mhi.com/jp/group/mhinseng/" target="_blank" rel="noopener">MHIニュークリアシステムズ・ソリューションエンジニアリング株式会社</a></li>
+        <li><a href="https://www.ctc-g.co.jp/" target="_blank" rel="noopener">伊藤忠テクノソリューションズ株式会社</a></li>
+        <li><a href="https://www.janus.co.jp/" target="_blank" rel="noopener">日本エヌ・ユー・エス株式会社</a></li>
+        <li><a href="https://criepi.denken.or.jp/" target="_blank" rel="noopener">電力中央研究所</a></li>
+        <li><a href="https://www.iae.or.jp/" target="_blank" rel="noopener">エネルギー総合工学研究所</a></li>
+        <li><a href="https://www.genanshin.jp/" target="_blank" rel="noopener">原子力安全推進協会</a></li>
+        <li><a href="https://www.rist.or.jp/" target="_blank" rel="noopener">高度情報科学技術研究機構</a></li>
+        <li><a href="https://www.numo.or.jp/" target="_blank" rel="noopener">原子力発電環境整備機構</a></li>
+        <li><a href="https://www.hokudai.ac.jp/" target="_blank" rel="noopener">北海道大学</a></li>
+        <li><a href="https://www.tohoku.ac.jp/japanese/" target="_blank" rel="noopener">東北大学</a></li>
+        <li><a href="https://www.u-tokyo.ac.jp/ja/index.html" target="_blank" rel="noopener">東京大学</a></li>
+        <li><a href="https://www.titech.ac.jp/" target="_blank" rel="noopener">東京科学大学(旧東京工業大学)</a></li>
+        <li><a href="https://www.waseda.jp/top/" target="_blank" rel="noopener">早稲田大学</a></li>
+        <li><a href="https://www.tcu.ac.jp/" target="_blank" rel="noopener">東京都市大学</a></li>
+        <li><a href="https://www.fukui-ut.ac.jp/" target="_blank" rel="noopener">福井工業大学</a></li>
+        <li><a href="https://www.osaka-u.ac.jp/ja" target="_blank" rel="noopener">大阪大学</a></li>
+        <li><a href="https://www.kyushu-u.ac.jp/ja/" target="_blank" rel="noopener">九州大学</a></li>
         </ul>
+      </div>
+      <div class="cl-group">
+        <h2 class="cl-cat">取引銀行</h2>
+        <ul class="client-list">
+        <li>三菱UFJ銀行 新橋支店</li>
+        </ul>
+      </div>
+      <div class="cl-group">
+        <h2 class="cl-cat">スタークラスター</h2>
+        <ul class="client-list">
+        <li><a href="https://www.astron.co.jp/" target="_blank" rel="noopener">株式会社 アストロン</a></li>
+        <li><a href="https://www.envix.co.jp/" target="_blank" rel="noopener">エンヴィックス</a></li>
+        </ul>
+      </div>
       </div>
     </div>
   </section>
