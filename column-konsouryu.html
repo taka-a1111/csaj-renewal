@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .sp-drawer{position:fixed;inset:0;z-index:200;display:none}
 .sp-drawer.open{display:block}
 .sp-drawer .ov{position:absolute;inset:0;background:rgba(14,12,31,.5);backdrop-filter:blur(2px)}
-.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1)}
+.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sp-drawer.open .panel{transform:none}
 .sp-drawer .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .sp-drawer .dh img{height:24px}
@@ -326,7 +326,7 @@ img{max-width:100%;display:block}
   .news-item .nt{font-size:14px}
 }
 
-</style>
+.prose p{text-indent:1em}</style>
 <style>
 .hd-dd{position:relative}
 .hd-dd>.hd-dd-t::after{content:"\25BE";font-size:9px;margin-left:5px;opacity:.6}
@@ -388,8 +388,8 @@ img{max-width:100%;display:block}
         <p>一方、解析結果の精度を向上させるために、この「理想的な」２流体モデルの基礎式を関連付ける構成方程式の精度を上げることが、必要不可欠となった。しかしそのような素過程に係わる基本的なデータベースの獲得が意外になされていないことも明らかになった。</p>
         <p>当時、神戸大学の冨山明男先生に依頼され、博士課程を修了したばかりの宋明良氏に、社会勉強のためにと言うことで、民間会社の私の部署へ入社して頂いたことがあった。その４年間の間に、２流体モデルを用いたサブチャンネル解析コードNASCAの開発を、宋氏と加茂英樹氏と一緒にできたことが、良い想い出になっている。</p>
         <p>解析技術の進歩や計算機の高速化に支えられて、解析精度の向上やプラントの出力上昇を目的として、最適評価コードへのニーズが高まってきた。そのために、単に「保守的に」安全であるではなく、その安全余裕の定量化が要求され、そのために更なるモデルの詳細化が必要となってきている。そしてモデルが詳細になればなるほどに、それらの現象を支配する素過程のモデルの基礎となっている実験データの信頼性と、実際には解析対象としなくてはならない実機規模への拡張性（適用性）と言ったスケーリングの問題が顕になって来ている。ここらで今までに蓄積された全てのデーターベースを、新しい観点から見直す必要がある時が来ているように思われる。混相流の分野は、まだまだ行く末を見とどけたい「気になる」分野である。</p>
-        <p style="margin-top:28px;text-align:right">株式会社　シー・エス・エー・ジャパン<br>代表取締役　社長<br>藪下　幸久</p>
-        <p style="color:#6b6b78;font-size:13px;text-align:right">[混相流(日本混相流学会発行)：2008年22巻3号に掲載]</p>
+        <p style="margin-top:28px;text-align:right;text-indent:0">株式会社　シー・エス・エー・ジャパン<br>代表取締役　社長<br>藪下　幸久</p>
+        <p style="color:#6b6b78;font-size:13px;text-align:right;text-indent:0">[混相流(日本混相流学会発行)：2008年22巻3号に掲載]</p>
       </div>
     </div>
   </section>

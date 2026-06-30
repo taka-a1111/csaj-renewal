@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .sp-drawer{position:fixed;inset:0;z-index:200;display:none}
 .sp-drawer.open{display:block}
 .sp-drawer .ov{position:absolute;inset:0;background:rgba(14,12,31,.5);backdrop-filter:blur(2px)}
-.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1)}
+.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sp-drawer.open .panel{transform:none}
 .sp-drawer .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .sp-drawer .dh img{height:24px}
@@ -326,7 +326,7 @@ img{max-width:100%;display:block}
   .news-item .nt{font-size:14px}
 }
 
-</style>
+.prose p{text-indent:1em}.email a{color:var(--brand);text-decoration:none}.email a:hover{text-decoration:underline}</style>
 <style>
 .hd-dd{position:relative}
 .hd-dd>.hd-dd-t::after{content:"\25BE";font-size:9px;margin-left:5px;opacity:.6}
@@ -394,20 +394,20 @@ img{max-width:100%;display:block}
           <tr><th>所在地</th><td>〒105-0012　東京都港区芝大門1-3-9　芝大門第一ビル</td></tr>
           <tr><th>電話</th><td>03-5776-1838</td></tr>
           <tr><th>FAX</th><td>03-5776-1859</td></tr>
-          <tr><th>メール</th><td>recruit(at)csaj.co.jp <small style="color:#6b6b78">※迷惑メール対策のため (at) を @ に置き換えてください</small></td></tr>
+          <tr><th>メール</th><td><span class="email" data-u="recruit" data-d="csaj.co.jp"></span></td></tr>
         </table>
 
         <h2>弊社が顧客に提供するもの</h2>
-        <p>　原子力の「エンジニアリング・サービス」と言っても、いったい何をしているのか想像しにくいかもしれません。新聞やテレビではそのとき何があったかを断片的に伝えるので知らない人にとって全体を把握しにくいのですが、原子力ではトラブルがあったときに結果として何が起こるのか、事前に科学的に説明することを政府が求めています。これは日本だけではなく、世界の多くの国でそうなっています。</p>
-        <p>　例えばあるトラブルが起こったときに、原子炉の中の圧力はどうなって温度はどうなるのか調べたいときに、実際の原子炉を使って実験して本当に危ない結果になるなら、それは事故になってしまいます。そうではなくてもポンプや弁を壊してしまえば交換するのに非常にお金がかかります。そうならないよう計算機でシミュレーションする、これが弊社が提供するサービスの１つ、熱水力解析です。</p>
-        <p>　そうやってあるトラブルが生じる１つのシナリオをシミュレーションすることも大事ですが、一方でトラブルはいろいろな種類があるわけですから、そのような多くのトラブルから生じるシナリオのうちどれが起こりやすいのだろうということは把握する必要があります。それを把握するために確率を使う、それが弊社が提供するサービスのもう１つ、リスク評価です。このリスク評価を行うことも、原子炉を持つ企業に対して政府が求めています。</p>
-        <p>　弊社から顧客には、シミュレーションや解析を行った結果そのものを提供することもありますし、解析のための道具を提供したり改良したり、他の国で使われている新しい技術を調べたりすることもあります。これが弊社の主な業務です。</p>
+        <p>原子力の「エンジニアリング・サービス」と言っても、いったい何をしているのか想像しにくいかもしれません。新聞やテレビではそのとき何があったかを断片的に伝えるので知らない人にとって全体を把握しにくいのですが、原子力ではトラブルがあったときに結果として何が起こるのか、事前に科学的に説明することを政府が求めています。これは日本だけではなく、世界の多くの国でそうなっています。</p>
+        <p>例えばあるトラブルが起こったときに、原子炉の中の圧力はどうなって温度はどうなるのか調べたいときに、実際の原子炉を使って実験して本当に危ない結果になるなら、それは事故になってしまいます。そうではなくてもポンプや弁を壊してしまえば交換するのに非常にお金がかかります。そうならないよう計算機でシミュレーションする、これが弊社が提供するサービスの１つ、熱水力解析です。</p>
+        <p>そうやってあるトラブルが生じる１つのシナリオをシミュレーションすることも大事ですが、一方でトラブルはいろいろな種類があるわけですから、そのような多くのトラブルから生じるシナリオのうちどれが起こりやすいのだろうということは把握する必要があります。それを把握するために確率を使う、それが弊社が提供するサービスのもう１つ、リスク評価です。このリスク評価を行うことも、原子炉を持つ企業に対して政府が求めています。</p>
+        <p>弊社から顧客には、シミュレーションや解析を行った結果そのものを提供することもありますし、解析のための道具を提供したり改良したり、他の国で使われている新しい技術を調べたりすることもあります。これが弊社の主な業務です。</p>
         <h2>現役社員より一言</h2>
-        <p>　弊社は上に記した通り、原子力工学の熱流体工学、安全工学、計算科学を主な専門として業務を行っています。では、学生時代からこれらの分野を専門としているエンジニアが集まっているかというとそうではなく、ほとんどの社員は入社してから原子力工学を学び始めています。学生時代は機械工学、物理学、化学、数学などを専攻していて、中には数値計算やデータ処理が未経験だったという社員もいます。そういう方でも経験ある上司の下で数年業務を遂行することで、皆すんなりと知識やスキルを習得して活躍しています。</p>
-        <p>　担当業務の選び方や働き方については、個人の性格や希望に応えるようにしています。データ処理を主業務としてこつこつと堅実に日々業務をこなす社員もいれば、熱流体実験の解析や機械学習などを研究テーマに大学や国の研究所の方々と積極的に議論をするような専門性に特化したエンジニアもいます。共通している事としては、自らじっくりと物事を考えて、考えたことを言葉や文章（時には数式）で伝えることを大切にしています。</p>
-        <p>　弊社に興味を抱いて頂けたなら、まずは社内のエンジニアと話をしてみてその雰囲気を感じてもらえればと思います。未経験の方でも働きやすい環境を整えているだけでなく、数値解析・分析の経験を有している方がその能力を十二分に生かせる場も用意していますので、幅広くお待ちしております。</p>
+        <p>弊社は上に記した通り、原子力工学の熱流体工学、安全工学、計算科学を主な専門として業務を行っています。では、学生時代からこれらの分野を専門としているエンジニアが集まっているかというとそうではなく、ほとんどの社員は入社してから原子力工学を学び始めています。学生時代は機械工学、物理学、化学、数学などを専攻していて、中には数値計算やデータ処理が未経験だったという社員もいます。そういう方でも経験ある上司の下で数年業務を遂行することで、皆すんなりと知識やスキルを習得して活躍しています。</p>
+        <p>担当業務の選び方や働き方については、個人の性格や希望に応えるようにしています。データ処理を主業務としてこつこつと堅実に日々業務をこなす社員もいれば、熱流体実験の解析や機械学習などを研究テーマに大学や国の研究所の方々と積極的に議論をするような専門性に特化したエンジニアもいます。共通している事としては、自らじっくりと物事を考えて、考えたことを言葉や文章（時には数式）で伝えることを大切にしています。</p>
+        <p>弊社に興味を抱いて頂けたなら、まずは社内のエンジニアと話をしてみてその雰囲気を感じてもらえればと思います。未経験の方でも働きやすい環境を整えているだけでなく、数値解析・分析の経験を有している方がその能力を十二分に生かせる場も用意していますので、幅広くお待ちしております。</p>
         <h2>社長より一言</h2>
-        <p>社員数10名と小さな会社ですが、少数精鋭だからこそ自由度も高く、それぞれが自主性を持って活き活きと仕事に取り組んでいます。</p>
+        <p>社員数10名程度と小さな会社ですが、少数精鋭だからこそ自由度も高く、それぞれが自主性を持って活き活きと仕事に取り組んでいます。</p>
       </div>
     </div>
   </section>
@@ -467,5 +467,6 @@ document.querySelectorAll('.reveal, .rv').forEach(el => observer.observe(el));
 </script>
 <button id="toTop" aria-label="ページトップへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <script>(function(){var b=document.getElementById("toTop");if(!b)return;function f(){if(window.scrollY>400)b.classList.add("show");else b.classList.remove("show");}window.addEventListener("scroll",f,{passive:true});f();})();</script>
+<script>document.querySelectorAll(".email").forEach(function(el){var u=el.getAttribute("data-u"),d=el.getAttribute("data-d");var a=document.createElement("a");a.href="mailto:"+u+"\u0040"+d;a.textContent=u+"\u0040"+d;el.appendChild(a);});</script>
 </body>
 </html>

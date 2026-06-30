@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .sp-drawer{position:fixed;inset:0;z-index:200;display:none}
 .sp-drawer.open{display:block}
 .sp-drawer .ov{position:absolute;inset:0;background:rgba(14,12,31,.5);backdrop-filter:blur(2px)}
-.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1)}
+.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sp-drawer.open .panel{transform:none}
 .sp-drawer .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .sp-drawer .dh img{height:24px}
@@ -326,7 +326,7 @@ img{max-width:100%;display:block}
   .news-item .nt{font-size:14px}
 }
 
-</style>
+.prose p{text-indent:1em}</style>
 <style>.filters .fl{cursor:pointer;user-select:none}</style>
 <style>
 .hd-dd{position:relative}
@@ -374,12 +374,12 @@ img{max-width:100%;display:block}
       <div class="pe">Analysis Codes</div><h1>取り扱いコード一覧</h1></div></section>
   <section class="lower">
     <div class="wrap">
-    <p class="sec-lead" style="margin-bottom:30px">当社が取り扱う解析コードを、事業の3本柱（熱水力／シビアアクシデント／PRA）ごとに分類して掲載しています。コード名をクリックすると詳細ページへ移動します。</p>
+    <p class="sec-lead" style="margin-bottom:30px">当社が取り扱う解析コードを、事業の3本柱ごとに分類して掲載しています。コード名をクリックすると詳細ページへ移動します。</p>
     <div class="filters">
       <span class="fl on" onclick="filterCat('all', this)">すべて</span>
-      <span class="fl" onclick="filterCat('thermo', this)">熱水力</span>
-      <span class="fl" onclick="filterCat('sa', this)">シビアアクシデント</span>
-      <span class="fl" onclick="filterCat('pra', this)">PRA</span>
+      <span class="fl" onclick="filterCat('thermo', this)">熱水力解析</span>
+      <span class="fl" onclick="filterCat('sa', this)">シビアアクシデント解析</span>
+      <span class="fl" onclick="filterCat('pra', this)">確率論的リスク評価</span>
     </div>
     <div class="theme-cat tc1" data-cat="thermo">
       <div class="theme-cat-h"><span class="badge en">1</span><h3>熱水力解析</h3><span class="ct en">13 codes</span></div>

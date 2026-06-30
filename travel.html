@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .sp-drawer{position:fixed;inset:0;z-index:200;display:none}
 .sp-drawer.open{display:block}
 .sp-drawer .ov{position:absolute;inset:0;background:rgba(14,12,31,.5);backdrop-filter:blur(2px)}
-.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1)}
+.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sp-drawer.open .panel{transform:none}
 .sp-drawer .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .sp-drawer .dh img{height:24px}
@@ -326,7 +326,7 @@ img{max-width:100%;display:block}
   .news-item .nt{font-size:14px}
 }
 
-</style>
+.prose p{text-indent:1em}</style>
 <style>
 .trip{margin:0 0 54px}.trip h2{margin-bottom:4px}.trip-sub{color:#6b6890;font-size:14px;margin:0 0 20px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.g-card{margin:0}

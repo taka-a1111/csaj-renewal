@@ -68,7 +68,7 @@ img{max-width:100%;display:block}
 .sp-drawer{position:fixed;inset:0;z-index:200;display:none}
 .sp-drawer.open{display:block}
 .sp-drawer .ov{position:absolute;inset:0;background:rgba(14,12,31,.5);backdrop-filter:blur(2px)}
-.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1)}
+.sp-drawer .panel{position:absolute;top:0;right:0;bottom:0;width:78%;max-width:320px;background:#fff;box-shadow:var(--shadow-l);padding:26px 24px;display:flex;flex-direction:column;gap:4px;transform:translateX(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sp-drawer.open .panel{transform:none}
 .sp-drawer .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
 .sp-drawer .dh img{height:24px}
@@ -326,7 +326,7 @@ img{max-width:100%;display:block}
   .news-item .nt{font-size:14px}
 }
 
-</style>
+.prose p{text-indent:1em}</style>
 <style>
 .hd-dd{position:relative}
 .hd-dd>.hd-dd-t::after{content:"\25BE";font-size:9px;margin-left:5px;opacity:.6}
@@ -408,8 +408,8 @@ img{max-width:100%;display:block}
         <h2>６．おわりに</h2>
         <p>最近は、公的な競合を公正化することが必要以上に主張されている傾向があるように思われる。確かにすでに確立した技術に対しては、不要な予算を圧縮すると言う意味の競合がプラスの意味をもつ場合もある。ただ、未だ確立されていない、研究開発的要素が強い研究プロジェクトに対してまで、無理やりに「見積り金額だけを対象にした競合」という不毛な競争原理を持ち込むことは、科学技術の健全な進展を阻害しかねない危険性をはらんでいることをアピールしていきたい。さもないと少数の特化した技術だけで生きていこうとしている研究開発的ベンチャー産業は、大企業との競合に決して勝ち目がなくなる。それが、技術の健全な発展を妨げる場合もあるかも知れない。</p>
         <p>これからは更に、各企業がそれぞれの得意な分野で、原子力の健全な発展に寄与できる社会システムの整備が望まれる。</p>
-        <p style="margin-top:28px;text-align:right">株式会社　シー・エス・エー・ジャパン<br>代表取締役　社長<br>藪下　幸久</p>
-        <p style="color:#6b6b78;font-size:13px;text-align:right">[原子力eye(株式会社日刊工業出版プロダクション発行)：2002年6月号に掲載]</p>
+        <p style="margin-top:28px;text-align:right;text-indent:0">株式会社　シー・エス・エー・ジャパン<br>代表取締役　社長<br>藪下　幸久</p>
+        <p style="color:#6b6b78;font-size:13px;text-align:right;text-indent:0">[原子力eye(株式会社日刊工業出版プロダクション発行)：2002年6月号に掲載]</p>
       </div>
     </div>
   </section>
